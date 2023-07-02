@@ -14,13 +14,13 @@ namespace Assignment13_GenericsPracticeProblems
 
 
             // Test cases
-            int result1= FindMaxInteger.FindMaximumInteger(10, 30, 60);
+            float result1= FindMaxValue.FindMaximumInteger(45.67f, 76.76f, 60.87f);
             Console.WriteLine("Test case 1: Max number at first position: " + result1);
 
-            int result2 = FindMaxInteger.FindMaximumInteger(10, 30, 60);
+            float result2 = FindMaxValue.FindMaximumInteger(45.67f, 76.76f, 60.87f);
             Console.WriteLine("Test case 2: Max number at second position: " + result2);
 
-            int result3 = FindMaxInteger.FindMaximumInteger(10, 30, 60);
+            float result3 = FindMaxValue.FindMaximumInteger(45.67f, 76.76f, 60.87f);
             Console.WriteLine("Test case 3: Max number at third position: " + result3);
             Console.ReadLine();
         }

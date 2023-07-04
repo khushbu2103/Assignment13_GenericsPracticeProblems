@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace Assignment13_GenericsPracticeProblems
 {
-    public class FindMaxValue
+    public class FindMaxValue<T> where T : IComparable
     {
-        public static T FindMaximum<T>(T first, T second, T third) where T : IComparable<T>
+        public T x, y, z;
+        public FindMaxValue(T a,T b,T c) 
+        {
+            x = a;
+            y = b;
+            z = c;
+        }
+
+        public static T FindMaximum(T first, T second, T third)
         {
 
 
@@ -26,6 +34,15 @@ namespace Assignment13_GenericsPracticeProblems
             {
                 Console.WriteLine("{0} is greater value", third);
                 return  third;
+            }
+        }
+
+        public  void TestMax()
+        {
+            T res = FindMaximum(x, y, z);
+            if (!(res.Equals(0)) || (res.Equals(null)))
+            {
+                Console.WriteLine("Max Value" + res);
             }
         }
 

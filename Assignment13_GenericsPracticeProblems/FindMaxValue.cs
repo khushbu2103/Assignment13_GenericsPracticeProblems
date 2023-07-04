@@ -8,7 +8,7 @@ namespace Assignment13_GenericsPracticeProblems
 {
     public class FindMaxValue
     {
-        public static float FindMaximumInteger(float first, float second, float third)
+        public static string FindMaximumString(string first, string second, string third)
         {
             if (first.CompareTo(second) >= 0 && first.CompareTo(third) >= 0)
             {

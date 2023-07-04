@@ -14,13 +14,13 @@ namespace Assignment13_GenericsPracticeProblems
 
 
             // Test cases
-            float result1= FindMaxValue.FindMaximumInteger(45.67f, 76.76f, 60.87f);
+            string result1= FindMaxValue.FindMaximumString("ghi", "def", "abc");
             Console.WriteLine("Test case 1: Max number at first position: " + result1);
 
-            float result2 = FindMaxValue.FindMaximumInteger(45.67f, 76.76f, 60.87f);
+            string result2 = FindMaxValue.FindMaximumString("ghi", "def", "abc");
             Console.WriteLine("Test case 2: Max number at second position: " + result2);
 
-            float result3 = FindMaxValue.FindMaximumInteger(45.67f, 76.76f, 60.87f);
+            string result3 = FindMaxValue.FindMaximumString("ghi", "def", "abc");
             Console.WriteLine("Test case 3: Max number at third position: " + result3);
             Console.ReadLine();
         }

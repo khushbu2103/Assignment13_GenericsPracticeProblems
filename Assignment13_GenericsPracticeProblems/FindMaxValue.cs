@@ -17,7 +17,10 @@ namespace Assignment13_GenericsPracticeProblems
 
         public T TestMaximum()
         {
-            return FindMaxValue<T>.TestMaximum(values);
+            T max = FindMaxValue<T>.TestMaximum(values);
+            FindMaxValue<T>.PrintMax(max);
+            return max;
+
         }
 
         public static T TestMaximum(params T[] values)
@@ -50,6 +53,11 @@ namespace Assignment13_GenericsPracticeProblems
             }
             return values[n - 1];
 
+        }
+
+        public static void PrintMax(T max)
+        {
+            Console.WriteLine("Max value: " + max);
         }
     }
 }

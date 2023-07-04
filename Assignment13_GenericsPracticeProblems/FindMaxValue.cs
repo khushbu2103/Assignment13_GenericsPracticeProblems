@@ -8,48 +8,48 @@ namespace Assignment13_GenericsPracticeProblems
 {
     public class FindMaxValue<T> where T : IComparable
     {
-        public T x, y, z;
-        public FindMaxValue(T a,T b,T c) 
+        private T[] values;
+
+        public FindMaxValue(params T[] values)
         {
-            x = a;
-            y = b;
-            z = c;
+            this.values = values;
         }
 
-        public static T FindMaximum(T first, T second, T third)
+        public T TestMaximum()
         {
-
-
-            if (first.CompareTo(second) >= 0 && first.CompareTo(third) >= 0)
-            {
-                Console.WriteLine("{0} is greater value", first);
-                return  first;
-            }
-            else if (second.CompareTo(first) >= 0 && second.CompareTo(third) >= 0)
-            {
-                Console.WriteLine("{0} is greater value", second);
-                return  second;
-            }
-            else
-            {
-                Console.WriteLine("{0} is greater value", third);
-                return  third;
-            }
+            return FindMaxValue<T>.TestMaximum(values);
         }
 
-        public  void TestMax()
+        public static T TestMaximum(params T[] values)
         {
-            T res = FindMaximum(x, y, z);
-            if (!(res.Equals(0)) || (res.Equals(null)))
+            if (values.Length == 0)
             {
-                Console.WriteLine("Max Value" + res);
+                Console.WriteLine("No values provided");
+                return default;
             }
+
+            int n = values.Length;
+            //bubble sort
+            for (int i = 0; i < n - 1; i++)
+            {
+                bool swapped = false;
+                for (int j = 0; j < n - 1 - i; j++)
+                {
+                    if (values[j].CompareTo(values[j+1]) > 0)
+                    {
+                        T temp = values[j];
+                        values[j] = values[j+1];
+                        values[j] = temp;
+                        swapped = true;
+                    }
+                }
+                if (swapped)
+                {
+                    break;
+                }
+            }
+            return values[n - 1];
+
         }
-
-       
-
-
-
-
     }
 }

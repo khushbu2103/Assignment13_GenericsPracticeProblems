@@ -8,8 +8,10 @@ namespace Assignment13_GenericsPracticeProblems
 {
     public class FindMaxValue
     {
-        public static string FindMaximumString(string first, string second, string third)
+        public static T FindMaximum<T>(T first, T second, T third) where T : IComparable<T>
         {
+
+
             if (first.CompareTo(second) >= 0 && first.CompareTo(third) >= 0)
             {
                 Console.WriteLine("{0} is greater value", first);
